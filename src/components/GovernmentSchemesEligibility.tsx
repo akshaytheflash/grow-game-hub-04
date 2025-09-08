@@ -63,6 +63,41 @@ const GovernmentSchemesEligibility = ({ credits }: GovernmentSchemesEligibilityP
       feature: "Support for sustainable farming practices and organic methods",
       discount: "Up to 15% discount",
       color: "text-emerald-600"
+    },
+    {
+      name: "Pradhan Mantri Fasal Bima Yojana",
+      icon: Trophy,
+      feature: "Crop insurance coverage for protection against natural calamities",
+      discount: "Premium subsidy up to 2%",
+      color: "text-orange-600"
+    },
+    {
+      name: "National Seeds Corporation Subsidy",
+      icon: Sprout,
+      feature: "High quality certified seeds at subsidized rates",
+      discount: "Up to 25% discount",
+      color: "text-green-700"
+    },
+    {
+      name: "Kisan Credit Card Scheme",
+      icon: IndianRupee,
+      feature: "Easy credit access for seeds, fertilizers and other farming inputs",
+      discount: "Interest subsidy up to 3%",
+      color: "text-blue-700"
+    },
+    {
+      name: "Paramparagat Krishi Vikas Yojana",
+      icon: Leaf,
+      feature: "Promotion of organic farming with certified organic seeds",
+      discount: "₹50,000/hectare support",
+      color: "text-green-800"
+    },
+    {
+      name: "National Food Security Mission",
+      icon: Gift,
+      feature: "Quality seeds and fertilizers for rice, wheat and pulses",
+      discount: "Up to 50% subsidy",
+      color: "text-amber-600"
     }
   ];
 
