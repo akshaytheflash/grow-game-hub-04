@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 import { 
   Trophy, 
   Gift, 
@@ -16,7 +17,23 @@ interface GovernmentSchemesEligibilityProps {
 }
 
 const GovernmentSchemesEligibility = ({ credits }: GovernmentSchemesEligibilityProps) => {
+  const { toast } = useToast();
+  
   if (credits < 100) return null;
+
+  const handleSchemeClick = (schemeName: string) => {
+    toast({
+      title: "Scheme Selected",
+      description: `You've selected ${schemeName}. Redirecting to application page...`,
+    });
+  };
+
+  const handleApplyAll = () => {
+    toast({
+      title: "Application Started",
+      description: "Redirecting to government schemes application portal...",
+    });
+  };
 
   const schemes = [
     {
@@ -89,7 +106,8 @@ const GovernmentSchemesEligibility = ({ credits }: GovernmentSchemesEligibilityP
             return (
               <div 
                 key={index}
-                className="flex items-start space-x-3 p-4 rounded-lg bg-card border border-border hover:border-green-300 transition-colors"
+                onClick={() => handleSchemeClick(scheme.name)}
+                className="flex items-start space-x-3 p-4 rounded-lg bg-card border border-border hover:border-green-300 hover:bg-green-50 dark:hover:bg-green-950/20 transition-all cursor-pointer transform hover:scale-[1.02]"
               >
                 <div className="p-2 rounded-lg bg-muted/50">
                   <IconComponent className={`h-4 w-4 ${scheme.color}`} />
@@ -107,7 +125,10 @@ const GovernmentSchemesEligibility = ({ credits }: GovernmentSchemesEligibilityP
         </div>
 
         <div className="pt-2">
-          <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+          <Button 
+            onClick={handleApplyAll}
+            className="w-full bg-green-600 hover:bg-green-700 text-white"
+          >
             <Gift className="h-4 w-4 mr-2" />
             Apply for Schemes
           </Button>
