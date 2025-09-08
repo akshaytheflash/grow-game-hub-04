@@ -26,7 +26,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="hero" size="lg" className="group" asChild>
-              <Link to={user ? "/" : "/auth"}>
+              <Link to={user ? "/learn" : "/auth"}>
                 {user ? "Continue Your Quest" : "Start Your Quest"}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
