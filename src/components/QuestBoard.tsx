@@ -27,6 +27,7 @@ import { useQuests } from "@/hooks/useQuests";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import GovernmentSchemesEligibility from "./GovernmentSchemesEligibility";
 
 // Icon mapping for quest icons
 const iconMap: Record<string, React.ComponentType<any>> = {
@@ -129,13 +130,18 @@ const QuestBoard = () => {
         </Card>
       </div>
 
-      {/* Notice Box */}
-      <Alert className="border-blue-200 bg-blue-50/50 dark:border-blue-800 dark:bg-blue-950/50">
-        <Info className="h-4 w-4 text-blue-600" />
-        <AlertDescription className="text-blue-700 dark:text-blue-300">
-          With credits you can avail government schemes with discount
-        </AlertDescription>
-      </Alert>
+      {/* Government Schemes Eligibility */}
+      <GovernmentSchemesEligibility credits={profile?.credits ?? 0} />
+
+      {/* Notice Box - Only show if credits < 100 */}
+      {(profile?.credits ?? 0) < 100 && (
+        <Alert className="border-blue-200 bg-blue-50/50 dark:border-blue-800 dark:bg-blue-950/50">
+          <Info className="h-4 w-4 text-blue-600" />
+          <AlertDescription className="text-blue-700 dark:text-blue-300">
+            Earn 100 credits to unlock government schemes with discounts
+          </AlertDescription>
+        </Alert>
+      )}
 
       {/* Quest Board Header */}
       <Card className="border-none shadow-natural bg-gradient-to-br from-primary/5 to-accent/5">
