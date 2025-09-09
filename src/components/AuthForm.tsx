@@ -155,7 +155,7 @@ const AuthForm = () => {
         <CardHeader className="text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Leaf className="h-8 w-8 text-leaf" />
-            <span className="text-2xl font-bold text-foreground">GrowQuest</span>
+            <span className="text-2xl font-bold text-foreground">KrishiKhel</span>
           </div>
           <CardTitle>Join the farming revolution</CardTitle>
           <CardDescription>
