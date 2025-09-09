@@ -29,7 +29,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
           <Leaf className="h-8 w-8 text-leaf" />
-          <span className="text-2xl font-bold text-foreground">GrowQuest</span>
+          <span className="text-2xl font-bold text-foreground">KrishiKhel</span>
         </Link>
         
         <div className="hidden md:flex items-center space-x-8">
