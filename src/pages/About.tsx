@@ -18,14 +18,14 @@ const About = () => {
           <div className="container mx-auto px-4 text-center">
             <Badge variant="secondary" className="mb-4 px-4 py-2">
               <Leaf className="h-4 w-4 mr-2" />
-              About GrowQuest
+              About KrishiKhel
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Empowering Farmers for a 
               <span className="text-gradient bg-gradient-hero bg-clip-text text-transparent"> Sustainable Future</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              GrowQuest is revolutionizing agriculture through gamification, community building, and sustainable farming practices. Join thousands of farmers on their journey to transform agriculture.
+              KrishiKhel is revolutionizing agriculture through gamification, community building, and sustainable farming practices. Join thousands of farmers on their journey to transform agriculture.
             </p>
           </div>
         </section>
