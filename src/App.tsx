@@ -27,7 +27,7 @@ const App = () => (
       attribute="class"
       defaultTheme="light"
       enableSystem={false}
-      storageKey="growquest-theme"
+      storageKey="krishikhel-theme"
     >
       <AuthProvider>
         <TooltipProvider>
