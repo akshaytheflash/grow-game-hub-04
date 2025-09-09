@@ -875,7 +875,7 @@ const SustainableGoals = () => {
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link to="/">
-                    Learn More About GrowQuest
+                    Learn More About KrishiKhel
                   </Link>
                 </Button>
               </div>
